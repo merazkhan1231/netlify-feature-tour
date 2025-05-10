@@ -1,0 +1,41 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Copy bKash Number</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding-top: 100px;
+    }
+    #bkashNumber {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 18px;
+      background-color: #ff4d4d;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div id="bkashNumber">01837322393</div>
+  <button onclick="copyText()">Copy Number</button>
+
+  <script>
+    function copyText() {
+      const text = document.getElementById("bkashNumber").innerText;
+      navigator.clipboard.writeText(text).then(() => {
+        alert("bKash number copied: " + text);
+      });
+    }
+  </script>
+</body>
+</html>
